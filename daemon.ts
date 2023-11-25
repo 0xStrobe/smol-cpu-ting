@@ -41,4 +41,9 @@ function monitorCpuUsage(interval = 1000) {
   }, interval);
 }
 
-monitorCpuUsage();
+const main = async () => {
+  await client.connect();
+  monitorCpuUsage();
+};
+
+main();
